@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FoodUCA</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="app">
+
+<!-- ===== COMUNES ===== -->
+<section class="screen center splash" id="splash" data-nav="">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <img src="img/logo-horizontal.png" alt="FoodUCA" class="logo-big">
+  <button class="btn yellow" data-go="role">Comenzar</button>
+</section>
+
+<section class="screen center" id="role">
+  <img src="img/logo-vertical.png" alt="FoodUCA" class="logo-v">
+  <h2 class="sub">¿Qué tipo de cuenta quieres crear?</h2>
+  <button class="btn yellow wide" data-role="b"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="10" r="3.5" fill="#fff"/><path d="M5.5 20c1-4 4-5 6.5-5s5.5 1 6.5 5z" fill="#fff"/></svg>Comprador</button>
+  <button class="btn blue wide" data-role="s"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="10" r="3.5" fill="#fff"/><path d="M5.5 20c1-4 4-5 6.5-5s5.5 1 6.5 5z" fill="#fff"/></svg>Emprendedor</button>
+  <p>¿Ya tienes cuenta?</p><a href="#" class="link" data-go="login-role">Iniciar sesión</a>
+</section>
+
+<section class="screen center" id="register">
+  <button class="back" data-back>‹</button>
+  <img src="img/logo-vertical.png" alt="FoodUCA" class="logo-v">
+  <h2 class="sub">Crea una cuenta</h2>
+  <form class="form" id="f-register" novalidate>
+    <label>Correo UCA<input type="email" name="mail" placeholder="00009625@uca.edu.sv"></label>
+    <label>Contraseña<input type="password" name="pass" minlength="6"></label>
+    <label>Nombre de usuario<input name="user" placeholder="Usuario"></label>
+    <p class="err"></p><button class="btn blue">Continuar</button>
+  </form>
+</section>
+
+<section class="screen center" id="login-role">
+  <button class="back" data-back>‹</button>
+  <img src="img/logo-vertical.png" alt="FoodUCA" class="logo-v">
+  <h2 class="sub">Iniciar sesión como:</h2>
+  <button class="btn yellow wide" data-login-role="b"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="10" r="3.5" fill="#fff"/><path d="M5.5 20c1-4 4-5 6.5-5s5.5 1 6.5 5z" fill="#fff"/></svg>Comprador</button>
+  <button class="btn blue wide" data-login-role="s"><svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="10" r="3.5" fill="#fff"/><path d="M5.5 20c1-4 4-5 6.5-5s5.5 1 6.5 5z" fill="#fff"/></svg>Emprendedor</button>
+</section>
+
+<section class="screen center" id="s-login">
+  <button class="back" data-back>‹</button>
+  <img src="img/logo-vertical.png" alt="FoodUCA" class="logo-v">
+  <h2 class="sub">Inicia sesión como emprendedor</h2>
+  <form class="form" id="f-slogin" novalidate>
+    <label>Nombre de emprendimiento<input name="biz" placeholder="Ejem... GustUca"></label>
+    <label>Nombre del responsable<input name="own"></label>
+    <label>Correo UCA<input type="email" name="mail"></label>
+    <label>Contraseña<input type="password" name="pass"></label>
+    <p class="err"></p><button class="btn blue">Continuar</button>
+  </form>
+</section>
+
+<section class="screen center" id="login">
+  <button class="back" data-back>‹</button>
+  <img src="img/logo-vertical.png" alt="FoodUCA" class="logo-v">
+  <h2 class="sub">Inicia sesión</h2>
+  <form class="form" id="f-login" novalidate>
+    <label>Correo UCA<input type="email" name="mail"></label>
+    <label>Contraseña<input type="password" name="pass"></label>
+    <p class="err"></p><button class="btn blue">Continuar</button>
+  </form>
+</section>
+
+<section class="screen center before-screen" id="before">
+  <button class="back" data-back>‹</button>
+  <div class="shield-badge" aria-hidden="true">
+    <svg viewBox="0 0 64 72" width="54" height="60">
+      <path d="M32 3L8 12.5v21.5c0 18.2 10.3 30.8 24 35 13.7-4.2 24-16.8 24-35V12.5L32 3z" fill="#FDBA19"/>
+      <rect x="29.4" y="18" width="5.2" height="22" rx="2.6" fill="#FFFFFF"/>
+      <circle cx="32" cy="47.5" r="3.2" fill="#FFFFFF"/>
+    </svg>
+  </div>
+  <h1>Antes de comenzar</h1>
+  <p class="before-lead">Al utilizar esta aplicación, te comprometes a</p>
+  <ul class="before-list">
+    <li>
+      <span class="chk-mark">✓</span>
+      <div><b>Usarla correctamente</b><p>Solo para buscar, ofrecer y coordinar la compra de alimentos.</p></div>
+    </li>
+    <li>
+      <span class="chk-mark">✓</span>
+      <div><b>Respetar a la comunidad</b><p>No publicar contenido inapropiado ni información falsa.</p></div>
+    </li>
+    <li>
+      <span class="chk-mark">✓</span>
+      <div><b>Proteger la información</b><p>Usar responsablemente tus datos y los de otros usuarios.</p></div>
+    </li>
+  </ul>
+  <label class="before-agree">
+    <input type="checkbox" id="accept">
+    <span class="dash-box" aria-hidden="true"></span>
+    <span>He leido y acepto las normas de uso y el aviso de privacidad.</span>
+  </label>
+  <p class="err" id="err-accept"></p>
+  <button class="btn yellow" id="accept-btn">Aceptar y continuar</button>
+</section>
+
+<!-- ===== COMPRADOR ===== -->
+<section class="screen" id="home" data-nav="b">
+  <div class="row end"><button class="avatar" data-go="profile" aria-label="Mi perfil" title="Mi perfil"></button></div>
+  <div class="search"><span>🔍</span><input id="q" placeholder="Filtrar precios y comida...." aria-label="Buscar"><button class="mini" data-go="filter" aria-label="Filtros">⚙</button></div>
+  <div class="chips" id="chips"><button class="chip on" data-cat="todos">Todos</button><button class="chip" data-cat="snack">Snacks</button><button class="chip" data-cat="comida">Comida</button></div>
+  <h3 class="blue">Recomendado para ti</h3>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="screen" id="filter" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Filtrar búsquedas</h2></header>
+  <form class="form left" id="f-filter">
+    <h4>¿Cuánto quieres gastar?</h4><input id="f-max" type="number" step="0.25" min="0" placeholder="Inserta la cantidad....">
+    <h4>¿Qué tipo de alimento buscas?</h4>
+    <div class="chips" id="f-cats"><button type="button" class="chip" data-c="comida">Comida</button><button type="button" class="chip" data-c="snack">Snaks</button><button type="button" class="chip" data-c="postre">Postre</button></div>
+    <h4>¿Cuánto tiempo tienes?</h4><input placeholder="Mínimo 5min - Máximo 30min">
+    <h4>Método de pago</h4><input placeholder="Transferencia o efectivo">
+    <button class="btn yellow">Buscar</button>
+  </form>
+</section>
+
+<section class="screen" id="results" data-nav="b">
+  <header class="top"><button class="back" data-back>‹</button><h2>Resultados</h2></header>
+  <div class="search"><input id="r-count" readonly value="0 opciones encontradas"></div>
+  <h3 class="blue">Recomendado para ti</h3>
+  <div class="list" id="r-list"></div>
+</section>
+
+<section class="screen" id="product" data-nav="">
+  <header class="top between"><button class="back" data-back>‹</button><button class="heart" id="p-fav" aria-label="Favorito">♡</button></header>
+  <div class="pdet">
+    <div class="ph big" id="p-img"></div>
+    <p class="blue center-t">Emprendimiento verificado</p>
+    <div class="card">
+      <h3 id="p-name"></h3><p class="light" id="p-desc"></p><b class="price" id="p-price"></b>
+      <p>📦 <span id="p-place"></span></p>
+      <p>💵 <span id="p-pay"></span></p><p>👤 <b class="blue" id="p-seller"></b></p>
+    </div>
+  </div>
+  <div class="bar"><div class="qty"><button id="q-" aria-label="Menos">−</button><span id="q-n">2</span><button id="q+" aria-label="Más">+</button></div><button class="btn yellow" id="sel-time">Seleccionar horario</button></div>
+</section>
+
+<section class="screen" id="chat" data-nav="" style="padding:0">
+  <header class="top dark"><button class="back w" data-back>‹</button><h2 id="c-title">Chat del pedido</h2><button class="rep" id="c-report"><svg class="shield-o sm" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="#FFF3B8" stroke-width="1.8" stroke-linecap="round"><path d="M12 3l7 2.2v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9v-6z"/><path d="M12 8v5"/></g><circle cx="12" cy="15.6" r=".9" fill="#FFF3B8"/></svg><small>Reportar</small></button></header>
+  <div class="msgs" id="msgs"></div>
+  <div class="composer">
+    <div class="pre" id="pre" hidden></div>
+    <div class="fieldwrap"><input type="text" class="field" id="msg-in" placeholder="Escribe o elige un mensaje..." aria-label="Escribe un mensaje" autocomplete="off"><button type="button" id="pre-btn" aria-label="Ver mensajes pre seleccionados">⌄</button></div>
+    <button type="button" class="tool" id="send-proof" aria-label="Enviar comprobante"><svg class="tsv" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M9 9h6M9 13h6M9 17h3"/></svg><small>Enviar<br>comprobante</small></button>
+    <button type="button" class="tool only-s" id="order-detail-btn" data-go="order-detail" aria-label="Detalles de orden"><svg class="tsv" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M9 9h6M9 13h6M9 17h3"/></svg><small>Detalles de<br>orden</small></button>
+    <button type="button" class="tool" id="c-cancel" aria-label="Cancelar pedido"><svg class="tsv" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><path d="M9 9l6 6M15 9l-6 6"/></svg><small>Cancelar</small></button>
+    <button type="button" class="tool send" id="msg-send" aria-label="Enviar mensaje"><svg class="tsv" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12L21 4l-6 17-3-7z"/></svg></button>
+  </div>
+</section>
+
+<section class="screen" id="order-detail" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button></header>
+  <div class="card od-items-card">
+    <h4 class="blue">Total de productos</h4>
+    <div id="od-items" style="display:grid;gap:12px"></div>
+  </div>
+  <div class="od-sum"><div class="row between"><span>Sub-total</span><span id="od-sub">$0.00</span></div><div class="row between"><span>Tarifa cobrada</span><span id="od-fee">$0.30</span></div></div>
+  <div class="od-total row between"><b>Total pagado</b><b id="od-total">$0.30</b></div>
+  <h4 class="blue od-h">Método de pago <span id="od-method" hidden></span></h4>
+  <button type="button" class="od-pay" data-pm="Transferencia bancaria"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 21h8M12 16v5M7 9h4M14 9l2 2-2 2"/></svg><span>Transferencia Bancaria</span></button>
+  <button type="button" class="od-pay" data-pm="Efectivo"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="3"/><circle cx="12" cy="12" r="3"/></svg><span>Contra pago/efectivo</span></button>
+  <h4 class="blue od-h">Comprobante</h4>
+  <div class="od-proof" id="od-proof-box" aria-label="Comprobante de pago"></div>
+  <button type="button" class="btn yellow od-back" data-back>Volver</button>
+</section>
+
+<section class="screen" id="orders" data-nav="b">
+  <div class="row between"><h3 class="blue">Mis pedidos</h3><button class="avatar" data-go="profile" aria-label="Mi perfil" title="Mi perfil"></button></div>
+  <div class="list" id="o-list"></div>
+  <p class="light" id="o-empty">Aún no tienes pedidos. ¡Pide algo rico!</p>
+</section>
+
+<section class="screen" id="favs" data-nav="b">
+  <div class="row between"><h3 class="blue">Me encantó comer esto....</h3><button class="avatar" data-go="profile" aria-label="Mi perfil" title="Mi perfil"></button></div>
+  <div class="list" id="fav-list"></div>
+  <p class="light" id="fav-empty">Aún no tienes favoritos guardados.</p>
+</section>
+
+<section class="screen" id="report" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Reportando a <span class="yel" id="rep-name"></span></h2></header>
+  <div class="card tight center-t">
+    <svg class="shield-o" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="#FDBA19" stroke-width="1.8" stroke-linecap="round"><path d="M12 3l7 2.2v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9v-6z"/><path d="M12 8v5"/></g><circle cx="12" cy="15.6" r=".9" fill="#FDBA19"/></svg>
+    <p class="bd">Estás a punto de reportar a <b id="rep-name2"></b>, asegúrate que el reporte sea verídico.</p>
+    <div id="rep-opts"></div>
+    <p class="err" id="err-rep"></p><button class="btn blue" id="rep-send">Enviar reporte</button>
+  </div>
+</section>
+
+<section class="screen" id="report-done" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Reporte enviado</h2></header>
+  <div class="card center-t"><svg class="shield-o" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="#FDBA19" stroke-width="1.8" stroke-linecap="round"><path d="M12 3l7 2.2v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9v-6z"/><path d="M12 8v5"/></g><circle cx="12" cy="15.6" r=".9" fill="#FDBA19"/></svg>
+    <p><b>FoodUCA</b> te agradece: tus reportes nos ayudan a identificar problemas y mejorar el servicio.</p>
+    <p>Nuestro equipo revisará la información proporcionada y, si es necesario, tomará las acciones correspondientes.</p>
+    <p>Tu colaboración es fundamental para mantener un ambiente de respeto y confianza.</p>
+    <button class="btn blue" data-home>Volver al inicio</button></div>
+</section>
+
+<!-- ===== AJUSTES / PERFIL (compartidos) ===== -->
+<section class="screen" id="settings" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Configuración y privacidad</h2></header>
+  <div class="card menu">
+    <a data-go="notifs"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0112 0v5l2 2H4z"/><path d="M10 21h4"/></svg><span><b>Notificaciones</b>Gestiona los avisos de tus pedidos</span></a>
+    <a data-go="privacy"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 018 0v3"/></svg><span><b>Privacidad y seguridad</b>Protege tu cuenta</span></a>
+    <a data-go="legal"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M9 13h6M9 17h4"/></svg><span><b>Información legal</b>Términos y política de privacidad</span></a>
+    <a data-go="about"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 11v6M12 7.5v.5"/></svg><span class="lb">Acerca de FoodUCA</span></a>
+    <a class="only-s" data-go="stats"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h13v18H5z"/><path d="M9 16v-4M12 16V9M15 16v-2"/></svg><span><b>Ver estadísticas</b></span></a>
+    <a class="only-s" id="m-change-plan"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="3"/><circle cx="12" cy="12" r="3"/></svg><span class="lb">Cambiar plan</span></a>
+    <a id="m-logout"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h8v16H5z"/><path d="M13 6l6 2v10l-6 2"/></svg><span class="yel">Cerrar sesión</span></a>
+    <a id="m-delete"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14M9 7V4h6v3M7 7l1 13h8l1-13"/></svg><span class="yel">Borrar cuenta</span></a>
+  </div>
+</section>
+
+<section class="screen" id="profile" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Mi perfil</h2></header>
+  <div class="card profile-card center-t">
+    <div class="avatar big profile-avatar" id="pf-avatar">
+      <svg viewBox="0 0 120 120" width="100%" height="100%" aria-hidden="true">
+        <circle cx="60" cy="44" r="21" fill="#C4C4C4"/>
+        <path d="M24 106c4-21 19-32 36-32s32 11 36 32" fill="#C4C4C4"/>
+      </svg>
+    </div>
+    <label class="yel profile-photo-btn">
+      <input type="file" accept="image/*" hidden id="photo">
+      <span id="pf-photo-txt">Agregar foto de perfil</span>
+    </label>
+    <span class="pill only-s">Emprendimiento verificado</span>
+    <button type="button" class="blue profile-edit-btn" id="edit-profile-btn">Editar perfil</button>
+    <div class="profile-fields">
+      <p><b>Nombre:</b><span class="lb" id="pf-user">@Usuario</span></p>
+      <p><b>Correo:</b><span class="lb" id="pf-mail">00009625@uca.edu.sv</span></p>
+      <p><b>Rol:</b><span class="lb" id="pf-role">comprador</span></p>
+      <p class="only-s"><b>Número de cuenta:</b><span class="lb" id="pf-acc">1234567890 CA</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="notifs" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Notificaciones</h2></header>
+  <div class="card" id="n-list"></div>
+</section>
+
+<section class="screen" id="privacy" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Privacidad y seguridad</h2></header>
+  <div class="card menu"><a data-go="password"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 018 0v3"/></svg><span><b>Cambiar contraseña</b></span>›</a><a data-go="sessions"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="10" r="3"/><path d="M6 19c1-3 3-4 6-4s5 1 6 4"/></svg><span><b>Sesiones activas</b></span>›</a>
+    <div class="safe"><div class="okc">✓</div><b>Tus datos están seguros</b><p>En FoodUCA utilizamos tu información solo para el funcionamiento de la página.</p></div></div>
+</section>
+
+<section class="screen" id="password" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Cambiar contraseña</h2></header>
+  <form class="form" id="f-pass" novalidate>
+    <input type="password" placeholder="Contraseña actual" aria-label="Contraseña actual">
+    <input type="password" placeholder="Nueva contraseña" aria-label="Nueva contraseña" id="np1">
+    <input type="password" placeholder="Confirmar contraseña" aria-label="Confirmar contraseña" id="np2">
+    <p class="err"></p><button class="btn yellow">Guardar cambios</button>
+  </form>
+</section>
+
+<section class="screen" id="sessions" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Sesiones activas</h2></header>
+  <div class="card"><b class="blue">Este dispositivo</b><p class="light">Chrome · Hoy</p></div>
+  <h4 class="blue">Otros dispositivos</h4>
+  <div class="card row between s-dev"><div><b class="blue">iPad</b><p class="light">iPadOS. Chrome · Ayer</p></div><button class="btn blue sm">Olvidar</button></div>
+  <div class="card row between s-dev"><div><b class="blue">iPhone</b><p class="light">iPhone. Chrome · Hace una semana</p></div><button class="btn blue sm">Olvidar</button></div>
+  <button class="btn yellow" id="close-all">Cerrar todas las sesiones</button>
+</section>
+
+<section class="screen" id="legal" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Información legal</h2></header>
+  <div class="card center-t blue"><p><b>FoodUCA</b> es una plataforma que conecta a estudiantes compradores con emprendedores de la comunidad universitaria de la UCA, facilitando la oferta y adquisición de productos alimenticios.</p>
+  <p>Al utilizar la plataforma, los usuarios se comprometen a proporcionar información verídica, respetar las condiciones de uso y mantener una comunicación responsable.</p>
+  <p>Los datos personales recopilados serán utilizados únicamente para el funcionamiento de <b>FoodUCA</b>, la gestión de pedidos y las comunicaciones relacionadas con el servicio.</p>
+  <p><b>FoodUCA</b> promueve un entorno seguro y respetuoso. No está permitido utilizar la plataforma para actividades fraudulentas o ajenas a su propósito.</p></div>
+</section>
+
+<section class="screen" id="about" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Acerca de FoodUCA</h2></header>
+  <div class="card center-t blue"><p><b>FoodUCA</b> nació a partir de una idea sencilla: hacer que encontrar comida dentro de la universidad sea más fácil, accesible y práctico para todos.</p>
+  <p>Surgió al reconocer que muchos estudiantes buscan opciones que se adapten a su presupuesto y tiempo, mientras que otros tienen pequeños emprendimientos gastronómicos que merecen ser conocidos.</p>
+  <p>Creemos que una comunidad crece cuando comparte y apoya las iniciativas de los demás. Te invitamos a compartir <b>FoodUCA</b> con tus amigos y recomendar tus emprendimientos favoritos.</p>
+  <p><b>¡Entre todos hacemos crecer FoodUCA!</b></p></div>
+</section>
+
+<!-- ===== EMPRENDEDOR (PRIMERO PLANES -> PAGO -> TÉRMINOS -> REGISTRO -> VERIFICACIÓN -> REVISIÓN -> APROBADO -> HORARIOS) ===== -->
+<section class="screen plans-screen" id="s-plans" data-nav="">
+  <header class="top brand-top"><button class="back" data-back>‹</button><img src="img/logo-horizontal.png" alt="FoodUCA" class="logo-s"></header>
+  <h2 class="plans-title">Planes adqueribles para<br>emprendedores de FoodUCA</h2>
+  <div class="plans" id="plans">
+    <button type="button" class="plan p-free" data-p="Gratuito" data-pr="0">
+      <div class="plan-head"><b>Gratuito</b><span class="radio-dot" aria-hidden="true"></span></div>
+      <div class="plan-row"><span class="p-ico free-ico">👤</span><span>Registro de usuario</span></div>
+      <div class="plan-row"><span class="p-ico free-ico">💬</span><span>5 pedidos al dia</span></div>
+      <small class="plan-note">Valido por 10 días</small>
+    </button>
+    <button type="button" class="plan p-std sel" data-p="Estandar" data-pr="15">
+      <div class="plan-head"><b>Estandar</b><span class="radio-dot" aria-hidden="true"></span></div>
+      <div class="plan-row"><span class="p-ico std-ico">💵</span><span>$15 mensuales</span></div>
+      <div class="plan-row"><span class="p-ico std-ico">👤</span><span>Registro de usuario</span></div>
+      <div class="plan-row"><span class="p-ico std-ico">💬</span><span>20 pedidos al dia</span></div>
+    </button>
+    <button type="button" class="plan p-plus" data-p="Plus" data-pr="30">
+      <div class="plan-head"><b>Plus</b><span class="radio-dot" aria-hidden="true"></span></div>
+      <div class="plan-row"><span class="p-ico plus-ico">💵</span><span>$30 mensuales</span></div>
+      <div class="plan-row"><span class="p-ico plus-ico">👤</span><span>Registro de usuario</span></div>
+      <div class="plan-row"><span class="p-ico plus-ico">💬</span><span>40 pedidos al dia</span></div>
+      <div class="plan-row"><span class="p-ico plus-ico">⌃</span><span>Primero en busquedas</span></div>
+      <div class="plan-row"><span class="p-ico plus-ico-spacer" aria-hidden="true"></span><span>Ver estadisticas</span></div>
+    </button>
+  </div>
+  <button type="button" class="btn blue" id="plan-go">Continuar con el plan</button>
+</section>
+
+<section class="screen pay-screen" id="s-pay" data-nav="">
+  <header class="top brand-top"><button class="back" data-back>‹</button><img src="img/logo-horizontal.png" alt="FoodUCA" class="logo-s"></header>
+  <h2 class="pay-heading">Pago de mensualidad</h2>
+  <div class="pay-summary-card">
+    <div class="pay-sum-left"><span class="pay-bill-ico">💵</span><b id="pay-price">$15.00</b></div>
+    <div class="pay-sum-right"><p>Plan seleccionado</p><b id="pay-plan">Estandar</b><p>Renovacion mensual</p></div>
+  </div>
+  <form class="form left pay-form" id="f-pay" novalidate>
+    <label>Nombre del responsable
+      <input name="holder" placeholder="Ejem... Fulano Contreras">
+    </label>
+    <label>Número de cuenta
+      <input name="card" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456">
+    </label>
+    <label>Correo electronico
+      <input name="mail" type="email" placeholder="ejemplo@uca.edu.sv">
+    </label>
+    <div class="two">
+      <label>CVC
+        <input name="cvc" inputmode="numeric" maxlength="3" placeholder="012">
+      </label>
+      <label>Fecha de vencimiento
+        <input name="exp" inputmode="numeric" maxlength="10" placeholder="01/01/2029">
+      </label>
+    </div>
+    <p class="err"></p><button class="btn blue pay-submit-btn">Finalizar pago</button>
+  </form>
+</section>
+
+<section class="screen center" id="s-paid" data-nav="">
+  <img src="img/logo-horizontal.png" alt="FoodUCA" class="logo-s"><div class="okbig">✓</div>
+  <h1>¡Pago confirmado!</h1><p class="blue">Tu plan <span id="pd-plan"></span> esta activo en FoodUCA</p>
+  <div class="pay-summary-card"><div class="pay-sum-left"><span class="pay-bill-ico">💵</span><b id="pd-price"></b></div><div class="pay-sum-right"><p>Plan seleccionado</p><b id="pd-plan2"></b><p>Renovacion mensual</p></div></div>
+  <div class="steps"><p>📅 Fecha de pago <b>10 Oct. 2026</b></p><p>🔄 Próxima renovación <b>10 Nov. 2026</b></p></div>
+  <button class="btn yellow" id="paid-next">Continuar</button>
+</section>
+
+<section class="screen center terms-screen" id="s-terms" data-nav="">
+  <button class="back" data-back>‹</button>
+  <img src="img/logo-horizontal.png" alt="FoodUCA" class="logo-s">
+  <div class="terms-doc-badge" aria-hidden="true">
+    <svg viewBox="0 0 48 60" width="38" height="48">
+      <rect x="3" y="3" width="42" height="54" rx="6" fill="none" stroke="#FFFFFF" stroke-width="4.2"/>
+      <line x1="12" y1="18" x2="36" y2="18" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+      <line x1="12" y1="29" x2="36" y2="29" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+      <line x1="12" y1="40" x2="27" y2="40" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <h1 class="terms-heading">Terminos y condiciones</h1>
+  <p class="terms-sub">Antes de continuar, leer y aceptar los terminos y condiciones para poder usar FoodUca como emprendedor</p>
+  <ul class="terms-list">
+    <li>
+      <span class="t-ico t-home" aria-hidden="true">🏠</span>
+      <div><b>Uso de la plataforma</b><p>La aplicación no podrá utilizarse para actividades fraudulentas, engañosas, discriminatorias o que perjudiquen a otros usuarios.</p></div>
+    </li>
+    <li>
+      <span class="t-ico t-chk" aria-hidden="true">✓</span>
+      <div><b>Responsabilidad del conteido</b><p>Los precios, cargos por entrega y comisiones aplicables deberán mostrarse claramente antes de confirmar una transacción.</p></div>
+    </li>
+    <li>
+      <span class="t-ico t-grp" aria-hidden="true">👥</span>
+      <div><b>Comunidad UCA</b><p>La plataforma estará dirigida principalmente a estudiantes de la UCA. Los requisitos de registro deberán definirse con la universidad.</p></div>
+    </li>
+  </ul>
+  <button class="btn yellow terms-btn" data-go="s-register">Aceptar y continuar</button>
+</section>
+
+<section class="screen" id="s-register" data-nav="">
+  <header class="top brand-top"><button class="back" data-back>‹</button><img src="img/logo-horizontal.png" alt="FoodUCA" class="logo-s"></header>
+  <h2 class="sub">Registro del emprendimiento</h2>
+  <form class="form left" id="f-sreg" novalidate>
+    <label>Nombre de emprendimiento<input name="biz" placeholder="Ejem... GustUca"></label>
+    <label>Nombre del respondable<input name="own" placeholder="Introduzca nombre..."></label>
+    <label>Correo electrónico institucional<input type="email" name="mail" placeholder="ejemplo@uca.edu.sv"></label>
+    <label>Número de carnet<input name="id" placeholder="00000000" inputmode="numeric"></label>
+    <label>Número de cuenta<input name="acc" placeholder="1234567890 CA"></label>
+    <label>Contraseña<input type="password" name="pass"></label>
+    <label>Confirma tu contraseña<input type="password" name="pass2"></label>
+    <p class="err"></p><button class="btn blue">Continuar</button>
+  </form>
+</section>
+
+<section class="screen" id="s-verify" data-nav="">
+  <header class="top brand-top"><button class="back" data-back>‹</button><img src="img/logo-horizontal.png" alt="FoodUCA" class="logo-s"></header>
+  <h2 class="sub">Verifica tu emprendimiento</h2>
+  <h3 class="yel">Fotos de tus productos</h3>
+  <label class="drop" id="d1"><input type="file" accept="image/*" hidden><span>Subir fotografia</span>🖼<small>Agrega una foto real de lo que vendes</small></label>
+  <h3 class="yel">Documento de estudiante</h3>
+  <label class="drop" id="d2"><input type="file" hidden><span>Adjuntar Documento</span>📄<small>Carnet o documento autorizado</small></label>
+  <p class="err" id="err-ver"></p><button class="btn yellow" id="send-req">Enviar solicitud</button>
+</section>
+
+<section class="screen center" id="s-review" data-nav="">
+  <img src="img/logo-horizontal.png" alt="FoodUCA" class="logo-s"><div class="clock">🕐</div>
+  <h1>¡Solicitud enviada!</h1><p class="blue">Tu emprendimiento esta en revisión.<br>Espera 10 minutos</p>
+  <div class="steps"><p>✓ Plan seleccionado</p><p>✓ Registro completado</p><p>✓ Documentos enviados</p><p>🕐 Verificacion pendiente</p></div>
+  <p class="blue">Tu emprendimiento esta en revision, te avisaremos cuando haya respuesta</p>
+  <button class="btn yellow" data-go="s-approved">Entendido</button>
+</section>
+
+<section class="screen center" id="s-approved" data-nav="">
+  <img src="img/logo-horizontal.png" alt="FoodUCA" class="logo-s"><div class="okbig">✓</div>
+  <h1>¡Emprendimiento aprobado!</h1><p class="blue">Tu emprendimiento ya forma parte de FoodUCA</p>
+  <div class="card menu small"><a>🏠 Mi emprendimiento</a><a>🍴 Mis productos</a><a>🕐 Horarios de entrega</a></div>
+  <button class="btn yellow" data-go="s-schedule">Continuar</button>
+</section>
+
+<section class="screen" id="s-schedule" data-nav="">
+  <h3 class="blue">Antes de continuar, escribe los horarios en que deseas realizar los pedidos.....</h3>
+  <p class="lb">Coloca un - en un dado caso no hagas entregas en ciertos días</p>
+  <form class="form left" id="f-sched">
+    <div class="card cream days" id="days"></div>
+    <h4>Escribe el lugar de la UCA en donde realizarás los pedidos....</h4><input name="place" placeholder="Ej: Peatonal">
+    <h4 id="pay-label">Selecciona tu método de pago preferido</h4>
+    <input type="hidden" name="pay" id="sched-pay">
+    <div class="chips pay-chips" id="pay-chips" role="radiogroup" aria-labelledby="pay-label">
+      <button type="button" class="chip" role="radio" aria-checked="false" data-pay="Efectivo">Efectivo</button>
+      <button type="button" class="chip" role="radio" aria-checked="false" data-pay="Transferencia">Transferencia</button>
+      <button type="button" class="chip" role="radio" aria-checked="false" data-pay="Efectivo o transferencia">Ambos</button>
+    </div>
+    <p class="err"></p><button class="btn blue">Confirmar</button>
+  </form>
+</section>
+
+<section class="screen" id="s-products" data-nav="s">
+  <div class="row between"><img src="img/logo-horizontal.png" alt="FoodUCA" class="logo-s"><button class="avatar" data-go="profile" aria-label="Mi perfil" title="Mi perfil"></button></div>
+  <h3 class="blue">Mis productos</h3>
+  <div class="grid g3" id="s-grid"></div>
+</section>
+
+<section class="screen" id="s-edit" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2 id="e-title">Agregar producto</h2></header>
+  <form class="card form left" id="f-prod" novalidate>
+    <label class="photo-box" for="e-file">
+      <div class="ph mid" id="e-img"></div>
+      <span class="blue link center-t" id="e-img-label">Agrega foto del producto</span>
+    </label>
+    <input type="file" accept="image/*" hidden id="e-file">
+    <label id="e-name-wrap">Nombre del producto<input name="name" placeholder="Ej: Hamburguesa clásica"></label>
+    <label id="e-desc-label">Escribe una breve descripción de este producto<textarea name="desc" rows="3" placeholder="Ingredientes, tamaño o detalles..."></textarea></label>
+    <h4 id="e-cat-label">Selecciona la categoría de este producto</h4><div class="chips" id="e-cats"><button type="button" class="chip cat-food" data-c="comida">Comida</button><button type="button" class="chip cat-snack" data-c="snack">Snack</button></div>
+    <label id="e-price-label">Establece precio<input name="price" type="number" step="0.25" min="0" placeholder="$......"></label>
+    <label id="e-time-label">Selecciona uno de tus horarios para este producto<input name="time" placeholder="......"></label>
+    <p class="err"></p>
+    <div class="row between" id="e-actions"><button type="button" class="btn yellow sm" id="e-del" hidden>Eliminar producto</button><button type="submit" class="btn blue" id="e-save">Confirmar</button></div>
+  </form>
+</section>
+
+<section class="screen" id="s-orders" data-nav="s">
+  <div class="row between"><h3 class="blue">Mis pedidos</h3><button class="avatar" data-go="profile" aria-label="Mi perfil" title="Mi perfil"></button></div>
+  <div class="list" id="so-list"></div>
+  <p class="light" id="so-empty">Aún no tienes solicitudes de pedidos.</p>
+  <span class="badge" id="so-count">0/20</span>
+</section>
+
+<section class="screen" id="stats" data-nav="">
+  <header class="top"><button class="back" data-back>‹</button><h2>Estadisticas</h2></header>
+  <p class="blue center-t">Conoce el rendimiento de tu emprendimiento</p>
+  <div class="row center"><button class="btn yellow sm" data-per="mes">Al mes</button><button class="btn yellow sm" data-per="sem">A la semana</button></div>
+  <div class="kpis"><div><small>💬 Pedidos</small><b id="k1"></b></div><div><small>🪙 Ingresos</small><b id="k2"></b></div><div><small>📦 Productos vendidos</small><b id="k3"></b></div></div>
+  <div class="card"><div class="bars" id="bars"></div></div>
+  <div class="card dark"><h3>Productos mas vendidos</h3><div class="top3" id="top3"></div></div>
+</section>
+</main>
+
+<!-- Barras de navegación -->
+<nav class="nav" id="nav-b" hidden>
+  <button data-go="home" data-t="home"><svg class="nv" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8v10H3z"/><path d="M9 21v-6h6v6"/></svg><span>Inicio</span></button><button data-go="favs" data-t="favs"><svg class="nv" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.7-8 11-8 11z"/></svg><span>Favoritos</span></button>
+  <button data-go="orders" data-t="orders"><svg class="nv" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><span>Pedido</span></button><button data-go="settings" data-t="settings"><svg class="nv" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.5" stroke-width="3.2" stroke-dasharray="3.2 2.3"/></svg><span>Ajustes</span></button>
+</nav>
+<nav class="nav" id="nav-s" hidden>
+  <button data-go="s-products" data-t="s-products"><svg class="nv" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-5 9 5v9l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v9"/></svg><span>Productos</span></button><button data-go="s-orders" data-t="s-orders"><svg class="nv" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg><span>Pedidos</span></button>
+  <button data-go="settings" data-t="settings"><svg class="nv" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="7.5" stroke-width="3.2" stroke-dasharray="3.2 2.3"/></svg><span>Ajustes</span></button>
+</nav>
+
+<!-- Ventana emergente reutilizable -->
+<div class="overlay" id="ov" hidden><div class="modal" id="md"></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
